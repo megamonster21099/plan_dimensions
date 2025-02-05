@@ -12,7 +12,7 @@ extension DoubleDimensExtension on double {
 
 extension IntDimensExtension on int {
   ///Converts the design points to Flutter logical pixels
-  double get toLp => designToLp(this as double);
+  double get toLp => designToLp(toDouble());
 }
 
 /// Widget that handles difference between the planned dimensions on design and flutter logical pixels
@@ -84,7 +84,6 @@ class PlanDimensionsWidget extends StatelessWidget {
           //   planFactRatio: planFactRatio,
           //   child: child,
           // );
-
           PlanDimens()._init(designPointsWidth, designPointsHeight, screenWidth, screenHeight, designToLpRatio);
           return child;
         },
