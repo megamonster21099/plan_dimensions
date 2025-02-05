@@ -25,8 +25,8 @@ The goal is to display the same image on 8-inch and 10-inch tablets, so it will 
 To do this, just wrap the app into the `PlanDimensionsWidget` (see [Usage](https://github.com/megamonster21099/plan_dimensions?tab=readme-ov-file#usage) section) and convert the image size **to flutter logical pixels** (toLp) like this:
 ```dart
   Container(
-    width: 300.toLP,
-    height: 300.toLP,
+    width: 300.toLp,
+    height: 300.toLp,
     color: Colors.red,
   );
 ```
@@ -64,24 +64,24 @@ class MyApp extends StatelessWidget {
 }
 ```
 
-Use your design points in the code and convert them to flutter logical pixels using the `toLP` extension:
+Use your design points in the code and convert them to flutter logical pixels using the `toLp` extension:
 ```dart
 
-  final double appbarHeight = 112.5.toLP;
+  final double appbarHeight = 112.5.toLp;
 
   ///////////////////////////////////////
   
   Image.asset(
     'assets/logo.png',
-    width: 200.toLP,
-    height: 120.toLP,
+    width: 200.toLp,
+    height: 120.toLp,
   ),
 
   ///////////////////////////////////////
   
   Container(
-    width: 300.0.toLP,
-    height: 300.0.toLP,
+    width: 300.0.toLp,
+    height: 300.0.toLp,
     color: Colors.red,
   );
 
