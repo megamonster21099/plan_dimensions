@@ -43,7 +43,6 @@ dependencies:
   plan_dimensions:
     git:
       url: https://github.com/megamonster21099/plan_dimensions
-      ref: master
 ```
 
 Wrap your app widget with the PlanDimensionsWidget and provide the designed dimensions for each device type (phone, tablet, desktop) in design points:
