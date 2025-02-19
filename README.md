@@ -56,6 +56,7 @@ class MyApp extends StatelessWidget {
       phoneMinSideDesignPoints: 608.0, //The smallest side of the phone screen in design points
       tabletMinSideDesignPoints: 1080.0, //The smallest side of the tablet screen in design points
       desktopMinSideDesignPoints: 1444.0, //The smallest side of the desktop screen in design points
+      disableLogs: true, //If true, no prints to console
       child: MaterialApp(
         .........................................
       ),

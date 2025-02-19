@@ -23,6 +23,7 @@ class PlanDimensionsWidget extends StatelessWidget {
     this.phoneMinSideDesignPoints = 608.0,
     this.tabletMinSideDesignPoints = 1080.0,
     this.desktopMinSideDesignPoints = 1444.0,
+    this.disableLogs = false,
   });
 
   final Widget child;
@@ -35,6 +36,9 @@ class PlanDimensionsWidget extends StatelessWidget {
 
   /// The size of the smallest side of the desktop screen. Provided as "design points"
   final double desktopMinSideDesignPoints;
+
+  ///If true, no prints to console
+  final bool disableLogs;
 
   @override
   Widget build(final BuildContext context) => LayoutBuilder(
@@ -90,7 +94,7 @@ class PlanDimensionsWidget extends StatelessWidget {
       );
 
   void _log(final String message) {
-    if (kDebugMode) print(message);
+    if (kDebugMode && !disableLogs) print(message);
   }
 }
 
